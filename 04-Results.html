@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04-Results';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Conclusions" href="05-Conclusions.html" />
+    <link rel="prev" title="The Determinants of Inflation" href="03-Determinants.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00-cero.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-cero.html">
+                    Inflation Regimes in Latin America
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00-data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-Regimes.html">Regimes and Persistence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-Determinants.html">The Determinants of Inflation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-Conclusions.html">Conclusions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-appendix.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F04-Results.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04-Results.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latin-america-a-heterogeneous-region">Latin America: A Heterogeneous Region</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-varying-determinants">Time-varying Determinants</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="results">
+<h1>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h1>
+<p>In this section, I elaborate on the dynamics of inflation: how each variable influences the acceleration of increase in prices over time, and what differentiates between Latin American countries. I compute the relative importance of each variable in the inflationary process. The tools show valuable information. However, it is important to notice that this measure is relative and not an absolute value.</p>
+<div class="section" id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
+<p>First, it is necessary to import some libraries.</p>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">g</span><span class="o">=</span><span class="nb">globals</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>I’ll use a <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> theme for the graphs in this notebook.</p>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone https://gist.github.com/markusdumke/572e2a8546c54b322b48c0c792799b77 bw
+<span class="n">theme_bw</span> <span class="o">=</span> <span class="s1">&#39;./bw/theme_bw.mplstyle&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">theme_bw</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Next, I import the Data Frames constructed in the previous <a class="reference internal" href="03-Determinants.html"><span class="doc std std-doc">section</span></a> and I build a panel with all the series.</p>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;arg&#39;</span><span class="p">:</span><span class="s1">&#39;Argentina&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bra&#39;</span><span class="p">:</span><span class="s1">&#39;Brazil&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;chl&#39;</span><span class="p">:</span><span class="s1">&#39;Chile&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;col&#39;</span><span class="p">:</span><span class="s1">&#39;Colombia&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cri&#39;</span><span class="p">:</span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mex&#39;</span><span class="p">:</span><span class="s1">&#39;Mexico&#39;</span>
+            <span class="p">}</span>
+
+<span class="nb">vars</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;m2&#39;</span><span class="p">:</span><span class="s1">&#39;Money Supply&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;mpr&#39;</span><span class="p">:</span><span class="s1">&#39;Interest Rates&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;uscpi&#39;</span><span class="p">:</span><span class="s1">&#39;US Inflation&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;er&#39;</span><span class="p">:</span><span class="s1">&#39;Exchange Rates&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;cons&#39;</span><span class="p">:</span><span class="s1">&#39;Consumption&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ppi&#39;</span><span class="p">:</span><span class="s1">&#39;Producer Prices&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ie&#39;</span><span class="p">:</span><span class="s1">&#39;Expectations&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ir_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/ir.xlsx&#39;</span><span class="p">,</span>
+        <span class="n">sheet_name</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+        <span class="n">index_col</span> <span class="o">=</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="n">ir</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ir_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="n">countries</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As I’ve updated the model with series that were not available before, new conclussions have shown. The graphs in this section are, for the moment, the same as in the original document.</p>
+</div>
+<p>Below is the code used to graph the variables’ mean relative importance.</p>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ir_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">ir_vars</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">f_vars</span><span class="p">,</span> <span class="n">a_vars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">raster</span>  <span class="o">=</span> <span class="n">a_vars</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ir_vars</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGn&quot;</span><span class="p">)</span>
+<span class="n">f_vars</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span>
+
+<span class="n">a_vars</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">a_vars</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="n">a_vars</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">a_vars</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="nb">vars</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="n">a_vars</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">a_vars</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">tick_top</span><span class="p">()</span>
+<span class="n">a_vars</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">f_vars</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./figures/ir_vars.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>And also the relative importance by theory.</p>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ir_th</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="n">ir_th</span><span class="p">[</span><span class="s1">&#39;Monetary Policy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir_vars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ir_th</span><span class="p">[</span><span class="s1">&#39;International Factors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir_vars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ir_th</span><span class="p">[</span><span class="s1">&#39;Consumption&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;cons&#39;</span><span class="p">]</span>
+<span class="n">ir_th</span><span class="p">[</span><span class="s1">&#39;Producer Prices&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span>
+<span class="n">ir_th</span><span class="p">[</span><span class="s1">&#39;Expectations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ir_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span>
+
+<span class="n">ir_th</span> <span class="o">=</span> <span class="n">ir_th</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">f_th</span><span class="p">,</span> <span class="n">a_th</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">raster</span>  <span class="o">=</span> <span class="n">a_th</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ir_th</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGn&quot;</span><span class="p">)</span>
+<span class="n">f_th</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span>
+
+<span class="n">a_th</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">a_th</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">a_th</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">a_th</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">ir_th</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">a_th</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">a_th</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">tick_top</span><span class="p">()</span>
+<span class="n">a_th</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">f_th</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./figures/ir_theories.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="latin-america-a-heterogeneous-region">
+<h2>Latin America: A Heterogeneous Region<a class="headerlink" href="#latin-america-a-heterogeneous-region" title="Permalink to this heading">#</a></h2>
+<p>I first describe the general results. Figure <a class="reference internal" href="#fig-theories"><span class="std std-ref">4</span></a> summarises the average importance of each possible explanation throughout the 2020-2022 period. It is evident that monetary and international factors are the most relevant. Some countries show a more noticeable tendency, such as Costa Rica with an average of 48% of its inflation shift driven by the monetary policy; or Argentina, with international factors representing 38% of its variations. In contrast, Brazil and Colombia are remarkably affected by cost-push schemes, which represent the third more relevant theory in terms of average effects. Lastly, demand-pull and rational expectations share the last place with approximately 12% of influence for all countries. Despite this, expectations seem to be more equally distributed in a range from 10% to 16%, while demand-pull’s average is markedly determined by Chile and Mexico with 21% and 18%, respectively.</p>
+<div class="figure align-default" id="fig-theories">
+<img alt="_images/theories.png" src="_images/theories.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Inflation Theories, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-theories" title="Permalink to this image">#</a></p>
+</div>
+<p>The relative effects of each variable reflect a considerably heterogeneous background for Latin American countries. Figure <a class="reference internal" href="#fig-vars"><span class="std std-ref">5</span></a> presents a disaggregation of monetary and international factors. Technically, the predominant determinant is Producer Price Index, but this is on average and clear that Brazil strongly affects the mean value, having the stat a standard deviation of 10.86 pp. Next, there is what seems to be a familiar bold determinant: the United States inflation rate, which is not surprising considering the strong macroeconomic relations that Latin American countries and the US share, and the 2020-2022 circumstances that have disturbed all regions worldwide.</p>
+<div class="figure align-default" id="fig-vars">
+<img alt="_images/vars.png" src="_images/vars.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Inflation Determinants, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-vars" title="Permalink to this image">#</a></p>
+</div>
+<p>Furthermore, policy-related interest rates account for most of monetary policy effects (and with higher standard deviation), being almost all out of six countries relatively more driven by interest rates in contrast with money supply, except for Brazil. Moreover, Costa Rica and Chile are not only the two countries more greatly influenced by interest rates but also the less affected by M2. On the other hand, private consumption and inflation expectations show the same relative importance, and Chile leads both measurements. Consumption displays a higher standard deviation in contrast to expectations, as previously analysed. Finally, the least relevant variable throughout the period is the nominal exchange rate with an average relative influence of 9%.</p>
+</div>
+<div class="section" id="time-varying-determinants">
+<h2>Time-varying Determinants<a class="headerlink" href="#time-varying-determinants" title="Permalink to this heading">#</a></h2>
+<p>It is evident from the analysis that Latin America displays heterogeneity between countries in terms of the average effects. Then, an important question arises: Do countries individually follow a specific path throughout the period? The answer is no, as the tested variables display horizontal differences for each country; that is, there can be highly marked determinants of inflation on average, but they generally vary from one year to another, even between months.</p>
+<div class="figure align-default" id="fig-m2">
+<img alt="_images/m2.png" src="_images/m2.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Money Supply, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-m2" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-mpr">
+<img alt="_images/mpr.png" src="_images/mpr.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Interest Rates, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-mpr" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-uscpi">
+<img alt="_images/uscpi.png" src="_images/uscpi.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">US Inflation, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-uscpi" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-er">
+<img alt="_images/er.png" src="_images/er.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Exchange Rates, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-er" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-cons">
+<img alt="_images/cons.png" src="_images/cons.png" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Consumption, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-cons" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-ppi">
+<img alt="_images/ppi.png" src="_images/ppi.png" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Producer Prices, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-ppi" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-ie">
+<img alt="_images/m2.png" src="_images/m2.png" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Inflation Expectations, average importance (%), 2020-2022</span><a class="headerlink" href="#fig-ie" title="Permalink to this image">#</a></p>
+</div>
+<p>The determinants of inflation have a fluctuating context, and it is optimal to observe specific examples of this behavior. The above figures illustrate the average importance of each variable by year. As a result, the United States inflation rates highly influence Latin American countries. Throughout the period, this international factor showed an importance of at least 10% and values up to 32% in Costa Rica and Mexico, respectively, in 2020. Furthermore, Argentina exhibits the stronger relation between U.S. and local inflation, with a minimum influence of 23% in 2021. The previous analysis excludes Brazil because it displayed, on average, only 5% of inflation related to this factor during the whole period.</p>
+<p>The strongest effect of a single variable corresponds to policy-related rates in Costa Rica. On average, MPRs determined 62% and 35% of the country’s inflation in 2020 and 2021, respectively. This variable also influenced almost a fifth of Chile’s inflation. It is important to note that MPRs show significantly high standard deviations, with an approximated maximum value of 21pp in 2020. It also displays larger medians than means, which leads to think about heterogeneous effects.</p>
+<p>Another relevant result comes from Chile and the role of private consumption, which not only determines on average more than a fifth of the country’s inflation during the years but exhibits an increasing tendency. That is, Chile’s inflation has been each year more dependent on demand-pull factors, reaching a relative influence of 25% in both 2021 and 2022. Similarly, Mexico presented an increasing path, and demand-pull drives a quarter of inflation in 2022. What’s more interesting: it was the least relevant determinant for the North American country in 2020. In general, for all countries, indicators reveal that private consumption represented a higher impact on inflation in 2022, in contrast with 2020.</p>
+<p>Cost-push factors strongly influenced the acceleration of the increase in prices in Brazil and Colombia but in different ways. Brazil reveals a decreasing tendency in producer prices importance, while Colombia was each year more influenced by this factor. However, it is vital to note that almost half of Brazil’s inflation was determined by cost-push components in 2020 and by a still large share of 32% in 2022. Similarly, the results exhibit that Colombia had more constant shifts than Brazil, increasing each year by approximately 5pp, whereas Brazil displayed a decrease of 14pp between 2020 and 2021.</p>
+<p>Money supply effects in Brazil widely excel the average importance by 8pp. Unlike cost-push factors, the influence of M2 on Brazil’s inflation has increased throughout the period, causing almost a quarter of it in 2022. In contrast, the money supply became relatively less important in Argentina, with a 10pp decrease from 2020 to 2022.</p>
+<p>Expectations effects in Costa Rica increased significantly, determining almost a third of the country’s inflation in 2022. This indicator has similarly affected all countries throughout the period, having the minimum standard deviation across variables, with 2.34pp. Likewise, another factor with data clustered around the mean is the exchange rate. However, it is relevant to note that this was the least crucial variable with an average impact of 8.67%, and only Mexico experimented values higher than 15% of inflation driven by this determinant.</p>
+<p>Even the principal determinant of inflation varies between years. In 2020, it is the United States inflation rate, whereas producer prices represent, on average, the leading determinant of inflation in 2021 and 2022. Overall, the varying nature of these variables extends to shorter periods, as pictured in the appendix. Undoubtedly, inflation is not only a fluctuating phenomenon but one strongly responsive to current events.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-Determinants.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Determinants of Inflation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-Conclusions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conclusions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latin-america-a-heterogeneous-region">Latin America: A Heterogeneous Region</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-varying-determinants">Time-varying Determinants</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

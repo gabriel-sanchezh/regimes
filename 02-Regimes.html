@@ -1,0 +1,932 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regimes and Persistence &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02-Regimes';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Determinants of Inflation" href="03-Determinants.html" />
+    <link rel="prev" title="Introduction" href="01-Introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00-cero.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-cero.html">
+                    Inflation Regimes in Latin America
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00-data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-Introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regimes and Persistence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-Determinants.html">The Determinants of Inflation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-Results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-Conclusions.html">Conclusions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-appendix.html">Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02-Regimes.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02-Regimes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Regimes and Persistence</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflation-shifts">Inflation Shifts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-markov-model">Hidden Markov Model</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="regimes-and-persistence">
+<h1>Regimes and Persistence<a class="headerlink" href="#regimes-and-persistence" title="Permalink to this heading">#</a></h1>
+<p>In this section, I define what an inflation shift is and use a categorical Hidden Markov Model (HMM) to identify regimes of inflation and test their persistence in Latin America. I implement the method developed by <span id="id1">[<a class="reference internal" href="markdown.html#id3" title="William Kinlaw, Mark Kritzman, Michael Metcalfe, and David Turkington. The determinants of inflation. The Journal of Investment Management, 2022.">KKMT22</a>]</span>, who used it to identify those shifts for the United States.</p>
+<div class="section" id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
+<p>First, it is necessary to import some libraries.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">hmmlearn</span> <span class="kn">import</span> <span class="n">hmm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>I’ll use a <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> theme for the graphs in this notebook.</p>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone https://gist.github.com/markusdumke/572e2a8546c54b322b48c0c792799b77 bw
+<span class="n">theme_bw</span> <span class="o">=</span> <span class="s1">&#39;./bw/theme_bw.mplstyle&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">theme_bw</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>We have the modified data frames, as created in the <a class="reference internal" href="00-data.html"><span class="doc std std-doc">Data Preparation</span></a> section. An example of Costa Rica’s <code class="docutils literal notranslate"><span class="pre">dfm</span></code> is given below.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;arg&#39;</span><span class="p">:</span><span class="s1">&#39;Argentina&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bra&#39;</span><span class="p">:</span><span class="s1">&#39;Brazil&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;chl&#39;</span><span class="p">:</span><span class="s1">&#39;Chile&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;col&#39;</span><span class="p">:</span><span class="s1">&#39;Colombia&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cri&#39;</span><span class="p">:</span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mex&#39;</span><span class="p">:</span><span class="s1">&#39;Mexico&#39;</span>
+            <span class="p">}</span>
+
+<span class="nb">vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cpi&#39;</span><span class="p">,</span><span class="s1">&#39;m2&#39;</span><span class="p">,</span><span class="s1">&#39;mpr&#39;</span><span class="p">,</span><span class="s1">&#39;uscpi&#39;</span><span class="p">,</span><span class="s1">&#39;er&#39;</span><span class="p">,</span><span class="s1">&#39;cons&#39;</span><span class="p">,</span><span class="s1">&#39;ppi&#39;</span><span class="p">,</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/dfm.xlsx&#39;</span><span class="p">,</span>
+        <span class="n">sheet_name</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+        <span class="n">index_col</span> <span class="o">=</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="n">dfm_cri</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cpi</th>
+      <th>m2</th>
+      <th>mpr</th>
+      <th>uscpi</th>
+      <th>er</th>
+      <th>cons</th>
+      <th>ppi</th>
+      <th>ie</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-01-01</th>
+      <td>-0.302216</td>
+      <td>0.073047</td>
+      <td>-3.00</td>
+      <td>2.500415</td>
+      <td>-0.059185</td>
+      <td>3.595367</td>
+      <td>-0.669313</td>
+      <td>0.252608</td>
+    </tr>
+    <tr>
+      <th>2020-02-01</th>
+      <td>-0.055554</td>
+      <td>0.071874</td>
+      <td>-3.00</td>
+      <td>2.339315</td>
+      <td>-0.065345</td>
+      <td>-0.664840</td>
+      <td>-0.980867</td>
+      <td>-0.400522</td>
+    </tr>
+    <tr>
+      <th>2020-03-01</th>
+      <td>-0.071910</td>
+      <td>0.089210</td>
+      <td>-3.75</td>
+      <td>1.542867</td>
+      <td>-0.053946</td>
+      <td>-4.921696</td>
+      <td>-0.870116</td>
+      <td>-1.053652</td>
+    </tr>
+    <tr>
+      <th>2020-04-01</th>
+      <td>-0.885703</td>
+      <td>0.114154</td>
+      <td>-3.75</td>
+      <td>0.345205</td>
+      <td>-0.049571</td>
+      <td>-9.175206</td>
+      <td>-0.974993</td>
+      <td>-1.706781</td>
+    </tr>
+    <tr>
+      <th>2020-05-01</th>
+      <td>-1.043998</td>
+      <td>0.159856</td>
+      <td>-3.50</td>
+      <td>0.226409</td>
+      <td>-0.038776</td>
+      <td>-9.912311</td>
+      <td>-0.974943</td>
+      <td>-2.057326</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="inflation-shifts">
+<h2>Inflation Shifts<a class="headerlink" href="#inflation-shifts" title="Permalink to this heading">#</a></h2>
+<p>I identify an inflation shift from the acceleration of inflation; that is, the difference of the year-over-year rates, allowing to find abnormal moves up and down in inflation that could have occurred during the period. Let <span class="math notranslate nohighlight">\(\phi_{c,t}\)</span> t denote the inflation shift of country c at time t:</p>
+<div class="math notranslate nohighlight" id="equation-eq-shift">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-shift" title="Permalink to this equation">#</a></span>\[
+\phi_{c,t} = \frac{CPI_{c,t}}{CPI_{c,t-12}} - \left( \frac{CPI_{c,t}}{CPI_{c,t-36}}\right)^{\tfrac{1}{3}}
+\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-shift">(1)</a> gives a positive number if the one-year rate of inflation is greater than the three-year rate, and vice versa. Also, a larger number (positive or negative) indicates a larger difference in the mentioned rates. The corresponding period has been strongly atypical worldwide in terms of inflation, and Latin America is not an exception. During this period, most of the countries in the region have faced their uppermost rate in recent years. Figure <a class="reference internal" href="#fig-shift"><span class="std std-ref">1</span></a> provides evidence of this phenomenon using monthly data from the Latin American Reserve Fund’s Economic Information System (SIE), and confirms not only important differences with the preceding years’ rates but mostly positive changes; that is, generally, countries have experimented higher inflation rates in comparison to previous years.</p>
+<div class="cell tag_remove-output tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f_shift</span><span class="p">,</span> <span class="n">a_shift</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Loop through countries and plot their &#39;cpi&#39; data</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bra&#39;</span><span class="p">,</span> <span class="s1">&#39;chl&#39;</span><span class="p">,</span> <span class="s1">&#39;cri&#39;</span><span class="p">,</span> <span class="s1">&#39;mex&#39;</span><span class="p">]:</span>
+    <span class="n">a_shift</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">countries</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+
+<span class="c1"># Plot &#39;cpi&#39; data for Argentina divided by 5</span>
+<span class="n">a_shift</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dfm_arg</span><span class="p">[</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Argentina/5&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot &#39;cpi&#39; data for Colombia divided by 50</span>
+<span class="n">a_shift</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dfm_col</span><span class="p">[</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">50</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Colombia/50&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set the x-axis limits</span>
+<span class="n">a_shift</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-12-01&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set labels for the x and y axes</span>
+<span class="n">a_shift</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">a_shift</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Inflation Shift (%)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Get legend handles and labels to customize the legend order</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">handles</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">order</span><span class="p">],</span> <span class="p">[</span><span class="n">labels</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">order</span><span class="p">])</span>
+
+<span class="n">f_shift</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./figures/shift.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="figure align-default" id="fig-shift">
+<img alt="_images/shift.png" src="_images/shift.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Inflation shifts (%) in Latin America, according to Equation</span><a class="headerlink" href="#fig-shift" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="hidden-markov-model">
+<h2>Hidden Markov Model<a class="headerlink" href="#hidden-markov-model" title="Permalink to this heading">#</a></h2>
+<p>Given the time series utilised to measure inflation, it is valuable to introduce two relevant ideas: stochastic process and time series. The first one refers to a temporal sequence of random variables, whereas the second to a singular realisation of a stochastic process<a class="footnote-reference brackets" href="#rr" id="id2">1</a>, i.e. we have access to just one of the possible outcomes of each of these random variables, as in Equation <a class="reference internal" href="#equation-eq-stoch">(2)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-stoch">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-stoch" title="Permalink to this equation">#</a></span>\[
+    \{X_t\}_{t=-\infty}^\infty=\{...,x_{-1}, \overbrace{x_{0},x_{1},x_{2},...,x_{T}}^\text{observations, X},x_{T+1},x_{T+2},...\}
+\]</div>
+<p>Next, I use a Hidden Markov Model (HMM) to test the persistence of inflation shifts. A Hidden Markov Model is a tool for representing probability distributions over sequences of observations <span id="id3">[<a class="reference internal" href="markdown.html#id5" title="Zoubin Ghahramani. An introduction to hidden markov models and bayesian networks. International Journal of Pattern Recognition and Artificial Intelligence, 15(1):9–42, 2001.">Gha01</a>]</span>, in which a sequence of observations <span class="math notranslate nohighlight">\(X\)</span> is generated by a sequence of internal states <span class="math notranslate nohighlight">\(Z\)</span> that follow a stochastic process. Transitions between states <span class="math notranslate nohighlight">\(Z\)</span> are assumed to follow a Markov Model, where state <span class="math notranslate nohighlight">\(Z_t\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> only depends on state <span class="math notranslate nohighlight">\(Z_{t-1}\)</span> at time <span class="math notranslate nohighlight">\(t-1\)</span>.</p>
+<p>A Hidden Markov Model has two initial components. First, there are observations, that are the inflation shift time series for each country. Table <span class="xref myst">1</span> documents the selected characterization. In second place, there are hidden states that are addressed as regimes and follow the same categories as the observations: deceleration, normal shift, high acceleration and very high acceleration.</p>
+<table class="colwidths-auto table" id="tab-categories">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Categorization, Inflation Shifts</span><a class="headerlink" href="#tab-categories" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Inflation Shift</p></th>
+<th class="head"><p>Category</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phi_{c,t}&lt;0\)</span></p></td>
+<td><p>Deceleration</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0\leq\phi_{c,t}&lt;2\)</span></p></td>
+<td><p>Normal shift</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2\leq\phi_{c,t}&lt;4\)</span></p></td>
+<td><p>High acceleration</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phi_{c,t}\geq 4\)</span></p></td>
+<td><p>Very high acceleration</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="c1"># Deceleration</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Normal shift</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="o">&amp;</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="c1"># High acceleration</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="o">&amp;</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="mi">2</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Very high acceleration</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>The model requires three set parameters: first, a state transition model A that will assign a higher probability to regime persistence. This means that, for the initial model, it is more likely that after a certain regime in a specific month (let’s say deceleration at time <span class="math notranslate nohighlight">\(t\)</span>), a country shows the same regime the next month (deceleration at time <span class="math notranslate nohighlight">\(t+1\)</span>). I set the probabilities this way according to the findings of Kinlaw et al. 2022 regarding the strong regime persistence for the United States.</p>
+<p>Next, we have an observation model B that is set to have stronger probabilities linked to same observation-regime relations. For example, if we have an observed value (let’s say high inflation shift at time <span class="math notranslate nohighlight">\(t\)</span>), it would be very likely for the model to reflect the same category (high accelerated inflation regime at time <span class="math notranslate nohighlight">\(t+1\)</span>). Both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are available in the <a class="reference internal" href="06-appendix.html"><span class="doc std std-doc">appendix</span></a>. Finally, we have an initial state distribution <span class="math notranslate nohighlight">\(p\)</span> that depends on the first observation for each country. Having specified the model <span class="math notranslate nohighlight">\(λ = (A, B, p)\)</span> I run it for each country by using the hmmlearn python package<a class="footnote-reference brackets" href="#hmm" id="id4">2</a>. In order to obtain the best score possible, this process repeats for a thousand iterations with help of a pseudo-random number generator’s (PRNG) seed.</p>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mf">0.85</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.70</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.05</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.10</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.85</span><span class="p">]</span>
+    <span class="p">]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mf">0.70</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.10</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.50</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.10</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.70</span><span class="p">,</span><span class="mf">0.10</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.70</span><span class="p">]</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_iter</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestscore_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestmodel_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iter</span><span class="p">):</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hmm</span><span class="o">.</span><span class="n">CategoricalHMM</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="s1">&#39;est&#39;</span><span class="p">,</span> <span class="n">init_params</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">3000</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startprob_</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startprob_</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startprob_</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startprob_</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transmat_</span> <span class="o">=</span> <span class="n">A</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">emissionmat_</span> <span class="o">=</span> <span class="n">B</span>
+
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;fit_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span> <span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]]</span> <span class="p">)</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;score_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">score</span><span class="p">(</span> <span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]]</span> <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestscore_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;score_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestscore_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]:</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestmodel_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;model_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+            <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestscore_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;score_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;predicted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestmodel_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;observations&#39;</span><span class="p">]]</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestscore_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>It is convenient to update the <code class="docutils literal notranslate"><span class="pre">dfm</span></code>’s</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s1">&#39;./data/dfm.xlsx&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;xlsxwriter&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>As a result, the stationary transition model shows the probabilities of staying or switching to different regimes. Figure <a class="reference internal" href="#fig-hmm-chl"><span class="std std-ref">2</span></a> maps the situation for Chile. Similarly to the other countries, the regimes present strong persistence; that is, if Chile happens to be in a regime (let’s say, with normal inflation at time <span class="math notranslate nohighlight">\(t\)</span>), it is very likely that it stays in such regime the next period (having a normal inflation state at time <span class="math notranslate nohighlight">\(t+1\)</span>). Almost all analysed countries present strong persistence, as the elements in the diagonal of the transition matrix are substantially higher than the non-diagonal elements.</p>
+<div class="figure align-default" id="fig-hmm-chl">
+<img alt="_images/hmm_chl.png" src="_images/hmm_chl.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Transition matrix, Chile</span><a class="headerlink" href="#fig-hmm-chl" title="Permalink to this image">#</a></p>
+</div>
+<div class="figure align-default" id="fig-hmm-arg">
+<img alt="_images/hmm_arg.png" src="_images/hmm_arg.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Transition matrix, Argentina</span><a class="headerlink" href="#fig-hmm-arg" title="Permalink to this image">#</a></p>
+</div>
+<div class="cell tag_hide-input tag_remove-output tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Deceleration&#39;</span><span class="p">,</span><span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;High&#39;</span><span class="p">,</span><span class="s1">&#39;Very High&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;transmat_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;bestmodel_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transmat_</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">states</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">states</span>
+        <span class="p">)</span>
+    
+    <span class="n">f_hmm</span><span class="p">,</span> <span class="n">a_hmm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+    <span class="n">raster</span> <span class="o">=</span> <span class="n">a_hmm</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;transmat_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">)</span>
+    <span class="n">f_hmm</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span>
+
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">locator_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">nbins</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">states</span><span class="p">)</span>
+
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">a_hmm</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">tick_top</span><span class="p">()</span>
+
+    <span class="n">f_hmm</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./figures/hmm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Nevertheless, the analysis for Argentina produces a different result. As shown in Figure <a class="reference internal" href="#fig-hmm-arg"><span class="std std-ref">3</span></a>, only in the limit regimes it appears to exist a high persistence (deceleration and very high acceleration). Moreover, it would be more likely to have decelerated or high accelerated inflation after being in a normal context. Furthermore, if Argentina is in a high accelerated inflation state, the expectation of staying in the same state is similar than those of shifting to a normal or very high one.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="rr"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>See <span id="id5">[<a class="reference internal" href="markdown.html#id4" title="Randall Romero-Aguilar. Apuntes de macroeconometría. Escuela de Economía, Universidad de Costa Rica, 2020.">RA20</a>]</span></p>
+</dd>
+<dt class="label" id="hmm"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>Documentation available <a class="reference external" href="https://hmmlearn.readthedocs.io/en/latest/#">here</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01-Introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03-Determinants.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Determinants of Inflation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflation-shifts">Inflation Shifts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-markov-model">Hidden Markov Model</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

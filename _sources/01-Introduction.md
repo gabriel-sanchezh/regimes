@@ -1,0 +1,11 @@
+# Introduction
+
+Inflation is one of the most critical topics of economic theory. The relevance of this phenomenon relies not only on the thousands of researchers that study its determinants, but on the social impact behind it, for it must be widely recognized as the most regressive tax that exists[^figurative], affecting directly those who have less. Over the years, great thinkers have developed arguments on the causes of inflation, but it remains an open discussion. Moreover, it represents a challenge for policymakers who try to lessen its impact on people from all regions of the world.
+
+In the last three years, there has been an increasing public interest in the determinants and repercussions of the latter and unexpected inflationary events. In February 2023, for the eleventh consecutive month, it is the number one problem of the world, with 43% of people declaring it as one of the main problems they defy. Moreover, inflation holds the first place in 15 countries, including Argentina and Colombia, as the most considerable worry[^ipsos].
+
+The central purpose of this study is to analyze the determinants of inflation shifts in Latin American countries over the period 2020-2022. There are three objectives: 1. To define inflationary regimes and measure their persistence; 2. To examine the relative influence of a selected group of variables on inflationary processes; and 3. To identify differences over time between countries. The set of variables includes those traditionally in the discussion of the subject, which allows for comparison between the most common theories about inflation. The countries covered are Argentina, Brazil, Chile, Colombia, Costa Rica, and Mexico.
+
+The paper proceeds as follows. Section [2](./02-Regimes.ipynb) defines inflation shifts and employs a Hidden Markov Model to deduce inflationary regimes and their persistence in Latin America; Section [3](./03-Determinants.ipynb) summarises the most relevant inflation theories and methodologies employed to measure their influence. Finally, the determinants of inflation and comparative dynamics analysis are provided in Section [4](./04-Results.ipynb).
+[^figurative]: In a figurative way.
+[^ipsos]: According to What Worries the World, by IPSOS.

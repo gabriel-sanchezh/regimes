@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Preparation &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00-cero.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-cero.html">
+                    Inflation Regimes in Latin America
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00-data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Regimes.html">Regimes and Persistence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-Determinants.html">The Determinants of Inflation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-Results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-Conclusions.html">Conclusions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdata.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Preparation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download">Data Download</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-preparation">
+<h1>Data Preparation<a class="headerlink" href="#data-preparation" title="Permalink to this heading">#</a></h1>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the required libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+
+<span class="c1"># Create a dictionary called &#39;g&#39; that will be used to store global variables</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span>
+
+<span class="c1"># Set the plot style to &#39;ggplot&#39; for consistent plot appearance</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-download">
+<h2>Data Download<a class="headerlink" href="#data-download" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define lists for variables and countries</span>
+<span class="nb">vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cpi&#39;</span><span class="p">,</span> <span class="s1">&#39;m2&#39;</span><span class="p">,</span> <span class="s1">&#39;mpr&#39;</span><span class="p">,</span> <span class="s1">&#39;er&#39;</span><span class="p">,</span> <span class="s1">&#39;cons&#39;</span><span class="p">,</span> <span class="s1">&#39;ppi&#39;</span><span class="p">,</span> <span class="s1">&#39;ie&#39;</span><span class="p">]</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span> <span class="s1">&#39;bra&#39;</span><span class="p">,</span> <span class="s1">&#39;chl&#39;</span><span class="p">,</span> <span class="s1">&#39;col&#39;</span><span class="p">,</span> <span class="s1">&#39;cri&#39;</span><span class="p">,</span> <span class="s1">&#39;mex&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - SIE Data (CPI, M2, MPR)</span>
+
+<span class="n">sie_columns</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;[Fecha]&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[ARGENTINA]&#39;</span><span class="p">:</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[BRASIL]&#39;</span><span class="p">:</span><span class="s1">&#39;bra&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[CHILE]&#39;</span><span class="p">:</span><span class="s1">&#39;chl&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[COLOMBIA]&#39;</span><span class="p">:</span><span class="s1">&#39;col&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[COSTA RICA]&#39;</span><span class="p">:</span><span class="s1">&#39;cri&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;[MEXICO]&#39;</span><span class="p">:</span><span class="s1">&#39;mex&#39;</span>
+<span class="p">}</span>
+
+<span class="n">sie_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cpi&#39;</span><span class="p">,</span> <span class="s1">&#39;m2&#39;</span><span class="p">,</span> <span class="s1">&#39;mpr&#39;</span><span class="p">]</span>
+
+<span class="c1"># Load and preprocess SIE data for each variable</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sie_vars</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./data/</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">.xlsx&#39;</span><span class="p">,</span> 
+        <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">usecols</span><span class="o">=</span><span class="n">sie_columns</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">sie_columns</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    <span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - FRED Data (US CPI)</span>
+<span class="n">uscpi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/uscpi.xls&#39;</span><span class="p">,</span>
+        <span class="n">header</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;observation_date&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;CPIAUCSL&#39;</span><span class="p">:</span><span class="s1">&#39;uscpi&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+<span class="n">uscpi</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">uscpi</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - OECD Data (Exchange Rates)</span>
+
+<span class="c1"># Load &#39;oecd_er&#39; data</span>
+<span class="n">oecd_er</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/er.csv&#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;er&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="c1"># Convert the index to a monthly PeriodIndex</span>
+<span class="n">oecd_er</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">oecd_er</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create an empty DataFrame &#39;cons&#39;</span>
+<span class="n">er</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Extract exchange rates for specified countries</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">er</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">oecd_er</span><span class="p">[</span><span class="n">oecd_er</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;er&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Consumo opc1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - OECD Data (Consumption)</span>
+
+<span class="c1"># Load &#39;oecd_cons&#39; data</span>
+<span class="n">oecd_cons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/cons.csv&#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;cons&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="c1"># Convert the index to a monthly PeriodIndex</span>
+<span class="n">oecd_cons</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">oecd_cons</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create an empty DataFrame &#39;cons&#39;</span>
+<span class="n">cons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Interpolate and populate &#39;cons&#39; DataFrame for specific countries</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">cons</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">oecd_cons</span><span class="p">[</span><span class="n">oecd_cons</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;cons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Consumo opc2</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oecd_cons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/cons2.csv&#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="s1">&#39;Subject&#39;</span><span class="p">,</span> <span class="s1">&#39;MEASURE&#39;</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;cons&#39;</span><span class="p">}</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="n">oecd_cons</span> <span class="o">=</span> <span class="n">oecd_cons</span><span class="p">[</span><span class="n">oecd_cons</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Private final consumption expenditure&#39;</span><span class="p">]</span>
+<span class="n">oecd_cons</span> <span class="o">=</span> <span class="n">oecd_cons</span><span class="p">[</span><span class="n">oecd_cons</span><span class="p">[</span><span class="s1">&#39;MEASURE&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;CQR&#39;</span><span class="p">]</span>
+
+<span class="n">oecd_cons</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">,</span><span class="s1">&#39;MEASURE&#39;</span><span class="p">])</span>
+
+<span class="n">oecd_cons</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">oecd_cons</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+
+<span class="n">cons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">cons</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">oecd_cons</span><span class="p">[</span><span class="n">oecd_cons</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;cons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - OECD Data (Inflation Expectations)</span>
+
+<span class="c1"># Load &#39;ie_q&#39; data (quarterly)</span>
+<span class="n">ie_q</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/ie_q.xlsx&#39;</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;ie&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="c1"># Convert the index to a quarterly PeriodIndex</span>
+<span class="n">ie_q</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">ie_q</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load &#39;ie_y&#39; data (yearly)</span>
+<span class="n">ie_y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/ie_y.xlsx&#39;</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;ie&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="c1"># Convert the index to a yearly PeriodIndex</span>
+<span class="n">ie_y</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">ie_y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create an empty DataFrame &#39;ie&#39;</span>
+<span class="n">ie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Interpolate and populate &#39;ie&#39; DataFrame for specific countries</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;mex&#39;</span><span class="p">,</span> <span class="s1">&#39;chl&#39;</span><span class="p">,</span> <span class="s1">&#39;col&#39;</span><span class="p">,</span> <span class="s1">&#39;cri&#39;</span><span class="p">]:</span>
+    <span class="n">ie</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">ie_q</span><span class="p">[</span><span class="n">ie_q</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span> <span class="s1">&#39;bra&#39;</span><span class="p">]:</span>
+    <span class="n">ie</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">ie_y</span><span class="p">[</span><span class="n">ie_y</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Preparation - Producer Prices Index (PPI)</span>
+
+<span class="c1"># Load PPI data for &#39;arg&#39; and &#39;bra&#39;</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span> <span class="s1">&#39;bra&#39;</span><span class="p">]:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ppi_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;./data/ppi.xlsx&#39;</span><span class="p">,</span>
+        <span class="n">sheet_name</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+        <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;ppi&#39;</span><span class="p">}</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ppi_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ppi_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load OECD PPI data</span>
+<span class="n">oecd_ppi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/oecd_ppi.csv&#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;ppi&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="n">oecd_ppi</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">oecd_ppi</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load OECD PPI data for &#39;chl&#39;</span>
+<span class="n">ppi_chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/oecd_ppi_chl.csv&#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;ppi&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+
+<span class="n">ppi_chl</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">PeriodIndex</span><span class="p">(</span><span class="n">ppi_chl</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create an empty DataFrame &#39;ppi&#39;</span>
+<span class="n">ppi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Populate &#39;ppi&#39; DataFrame for specific countries</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;arg&#39;</span><span class="p">,</span> <span class="s1">&#39;bra&#39;</span><span class="p">]:</span>
+    <span class="n">ppi</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;ppi_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">,</span> <span class="s1">&#39;cri&#39;</span><span class="p">,</span> <span class="s1">&#39;mex&#39;</span><span class="p">]:</span>
+    <span class="n">ppi</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">oecd_ppi</span><span class="p">[</span><span class="n">oecd_ppi</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()][</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span>
+
+<span class="n">ppi</span><span class="p">[</span><span class="s1">&#39;chl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ppi_chl</span><span class="p">[</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combine and Organize Data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">cpi</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">mpr</span><span class="p">,</span> <span class="n">er</span><span class="p">,</span> <span class="n">cons</span><span class="p">,</span> <span class="n">ppi</span><span class="p">,</span> <span class="n">ie</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="nb">vars</span><span class="p">)</span>
+
+<span class="c1"># Create DataFrames for each country (df_)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    
+    <span class="c1"># Populate DataFrames with selected variables and &#39;uscpi&#39;</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">:</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+    <span class="c1"># Add &#39;uscpi&#39; to the DataFrame</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;uscpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">uscpi</span><span class="p">[</span><span class="s1">&#39;uscpi&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create modified DataFrames for each country (dfm_)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    
+    <span class="c1"># Calculate and populate various variables in &#39;dfm_&#39;</span>
+    
+    <span class="c1"># Modification 1: &#39;cpi&#39; -&gt; Inflation shift</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">((</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span>
+        <span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cpi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+        <span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="c1"># Modification 2: &#39;m2&#39; -&gt; 3-year change (%)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;m2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;m2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="c1"># Modification 3: &#39;mpr&#39; -&gt; 1-year difference</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;mpr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;mpr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="c1"># Modification 4: &#39;uscpi&#39; -&gt; 1-year change (%)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;uscpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;uscpi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Modification 5: &#39;er&#39; -&gt; 1-year change (%)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;er&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;er&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="c1"># Modification 6: &#39;cons&#39; -&gt; 1-year change (%)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cons&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;cons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Modification 7: &#39;ppi&#39; -&gt; 1-year change (%)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Modification 8: &#39;ie&#39; -&gt; 1-year difference</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;df_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;ie&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Select a time range (&#39;2020-01&#39; to &#39;2022-12&#39;)</span>
+    <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dfm_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="s1">&#39;2020-01&#39;</span><span class="p">:</span><span class="s1">&#39;2022-12&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Final adjustments of missing values</span>
+
+<span class="c1">#dfm_arg[&#39;cons&#39;][&#39;2022-08&#39;] = dfm_arg[&#39;cons&#39;][&#39;2022-03&#39;:&#39;2022-07&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_arg[&#39;cons&#39;][&#39;2022-09&#39;] = dfm_arg[&#39;cons&#39;][&#39;2022-04&#39;:&#39;2022-08&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_arg[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_arg[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_arg[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_arg[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_arg[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_arg[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+
+<span class="n">dfm_bra</span><span class="p">[</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dfm_bra</span><span class="p">[</span><span class="s1">&#39;ppi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#dfm_bra[&#39;cons&#39;][&#39;2022-08&#39;] = dfm_bra[&#39;cons&#39;][&#39;2022-03&#39;:&#39;2022-07&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_bra[&#39;cons&#39;][&#39;2022-09&#39;] = dfm_bra[&#39;cons&#39;][&#39;2022-04&#39;:&#39;2022-08&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_bra[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_bra[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_bra[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_bra[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_bra[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_bra[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+
+<span class="c1">#Un poco diferente la fecha</span>
+<span class="n">dfm_col</span><span class="p">[</span><span class="s1">&#39;m2&#39;</span><span class="p">][</span><span class="s1">&#39;2022-12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfm_col</span><span class="p">[</span><span class="s1">&#39;m2&#39;</span><span class="p">][</span><span class="s1">&#39;2020-01&#39;</span><span class="p">:</span><span class="s1">&#39;2022-11&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="c1">#dfm_col[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_col[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_col[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_col[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_col[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_col[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+
+<span class="c1">#dfm_cri[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_cri[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_cri[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_cri[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_cri[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_cri[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+
+<span class="c1">#dfm_chl[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_chl[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_chl[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_chl[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_chl[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_chl[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+
+<span class="c1">#Un poco diferente la fecha</span>
+<span class="n">dfm_mex</span><span class="p">[</span><span class="s1">&#39;m2&#39;</span><span class="p">][</span><span class="s1">&#39;2022-12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfm_mex</span><span class="p">[</span><span class="s1">&#39;m2&#39;</span><span class="p">][</span><span class="s1">&#39;2020-01&#39;</span><span class="p">:</span><span class="s1">&#39;2022-11&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+
+<span class="c1">#dfm_mex[&#39;cons&#39;][&#39;2022-10&#39;] = dfm_mex[&#39;cons&#39;][&#39;2022-05&#39;:&#39;2022-09&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_mex[&#39;cons&#39;][&#39;2022-11&#39;] = dfm_mex[&#39;cons&#39;][&#39;2022-06&#39;:&#39;2022-10&#39;].rolling(window=5).mean().dropna()</span>
+<span class="c1">#dfm_mex[&#39;cons&#39;][&#39;2022-12&#39;] = dfm_mex[&#39;cons&#39;][&#39;2022-07&#39;:&#39;2022-11&#39;].rolling(window=5).mean().dropna()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an ExcelWriter object for a master dfm</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s1">&#39;./data/dfm.xlsx&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;xlsxwriter&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="c1"># Save each DataFrame to a separate sheet</span>
+    <span class="n">dfm_arg</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;arg&#39;</span><span class="p">)</span>
+    <span class="n">dfm_bra</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;bra&#39;</span><span class="p">)</span>
+    <span class="n">dfm_chl</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;chl&#39;</span><span class="p">)</span>
+    <span class="n">dfm_col</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;col&#39;</span><span class="p">)</span>
+    <span class="n">dfm_cri</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;cri&#39;</span><span class="p">)</span>
+    <span class="n">dfm_mex</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;mex&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download">Data Download</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
